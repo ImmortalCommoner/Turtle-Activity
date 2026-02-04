@@ -1,7 +1,7 @@
 import turtle
 
 t = turtle.Turtle()
-t.speed(1000)
+t.speed(0)
 screen = turtle.Screen()
 t.penup()
 t.goto(-100, -100)
