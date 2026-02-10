@@ -3,8 +3,8 @@ from math import ceil
 import numpy as np
 import turtle
  
-svg_file = r'"Z:\outline.svg"'
-sprite_path = r'Z:\{}_{}.gif'
+svg_file = "Z:\\outline.svg"
+sprite_path = r"Z:\{}_{}.gif"
  
 paths, attrs, svg_attr = svg2paths2(svg_file)
 svg_size = int(svg_attr['width'][:-2]), int(svg_attr['height'][:-2])
