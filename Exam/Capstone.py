@@ -21,7 +21,8 @@ buildingPoints = [
     (551, 257),
     (559, 258),
     (553, 326),
-    (560, 327)
+    (560, 327),
+    (900,96)
 
 ]
 
@@ -30,8 +31,13 @@ def draw_building():
     t.pu()
     t.goto(coordinates(*buildingPoints[0]))
     t.pd()
+    
+    t.fillcolor("black")
+    t.begin_fill()
     for point in buildingPoints:
+        
         t.goto(coordinates(*point))
+    t.end_fill()
 
     
 
