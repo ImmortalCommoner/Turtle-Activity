@@ -238,14 +238,108 @@ leftSecondSideColumnPoints = [
     (957.98, 987.28),
 ]
 
-rightLightThreePoints = [
-    (0, 0),
-    (0, 0),
+# leftThirdColumnPoints
+leftThirdFrontColumnPoints = [
+    (1474.02, 1352.31),
+    (1535.75, 1336.25),
+    (1519.44, 973.92),
+    (1456.53, 978.58),
+    (1474.02, 1352.31),
 ]
 
-rightLightThreePoints = [
-    (0, 0),
-    (0, 0),
+leftThirdTopColumnPoints = [
+    (1519.44, 973.92),
+    (1478.56, 973.14),
+    (1422.59, 975.04),
+    (1456.28, 978.81),
+    (1519.44, 973.92),
+]
+
+leftThirdSideColumnPoints = [
+    (1447.76, 1351.13),
+    (1474.02, 1352.31),
+    (1456.28, 978.81),
+    (1422.59, 975.04),
+    (1425.77, 1063.49),
+    (1444.66, 1067.18),
+    (1448.04, 1117.12),
+    (1427.96, 1118.60),
+    (1433.86, 1274.72),
+    (1445.53, 1279.16),
+    (1447.76, 1351.13),
+]
+
+# middle1stColumnPoints
+middle1stFrontColumnPoints = [
+    (1843.76, 1295.61),
+    (1882.20, 1288.49),
+    (1880.30, 1224.82),
+    (1890.44, 1223.81),
+    (1878.31, 967.56),
+    (1831.37, 970.90),
+    (1843.76, 1295.61),
+]
+
+middle1stTopColumnPoints = [
+    (1878.31, 967.56),
+    (1831.37, 970.90),
+    (1800.75, 969.38),
+    (1838.75, 967.38),
+    (1878.31, 967.56),
+]
+
+middle1stSideColumnPoints = [
+    (1823.33, 1293.10),
+    (1843.76, 1295.61),
+    (1831.37, 970.90),
+    (1800.75, 969.38),
+    (1802.59, 1041.66),
+    (1819.65, 1042.72),
+    (1820.65, 1089.65),
+    (1804.54, 1090.71),
+    (1809.49, 1226.39),
+    (1819.56, 1227.71),
+    (1823.33, 1293.10),
+]
+
+# tennisCourtPoints
+tennisLeftCourtPoints = [
+    (974.56, 1719.41),
+    (2365.88, 1375.63),
+    (1800.94, 1335.94),
+    (346.19, 1589.25),
+    (974.56, 1719.41),
+    (882.12, 1700.24),
+    (1353.58, 1589.22),
+    (884.69, 1517.69),
+    (412.03, 1603.03),
+    (1862.03, 1339.88),
+    (1636.31, 1381.81),
+    (2076.41, 1419.66),
+    (2284.75, 1369.67),
+    (1353.58, 1589.22),
+    (1100.47, 1550.56),
+    (1840.94, 1399.53),
+]
+
+tennisRightCourtPoints = [
+    (3118.56, 2164.76),
+    (3729.13, 1559.14),
+    (3736.19, 1469.56),
+    (2868.38, 1407.69),
+    (1599.66, 1848.33),
+    (3118.56, 2164.76),
+    (2858.26, 2110.51),
+    (3177.78, 1858.32),
+    (2185.67, 1710.07),
+    (1740.61, 1877.66),
+    (2970.78, 1414.81),
+    (2796.12, 1480.50),
+    (3572.81, 1546.25),
+    (3675.05, 1465.08),
+    (3177.78, 1858.32),
+    (2624.69, 1775.72),
+    (3157.32, 1511.26),
 ]
 
 rightLightThreePoints = [
@@ -474,6 +568,94 @@ def drawBuilding():
         
         t.goto(coordinates(*point))
     t.end_fill()
+
+    # leftThirdColumnPoints
+    t.pu()
+    t.goto(coordinates(*leftThirdFrontColumnPoints[0]))
+    t.pd()
+    
+    t.fillcolor("white")
+    t.begin_fill()
+    for point in leftThirdFrontColumnPoints:
+        
+        t.goto(coordinates(*point))
+    t.end_fill()
+
+    t.pu()
+    t.goto(coordinates(*leftThirdTopColumnPoints[0]))
+    t.pd()
+    
+    t.fillcolor("white")
+    t.begin_fill()
+    for point in leftThirdTopColumnPoints:
+        
+        t.goto(coordinates(*point))
+    t.end_fill()
+    
+    t.pu()
+    t.goto(coordinates(*leftThirdSideColumnPoints[0]))
+    t.pd()
+    
+    t.fillcolor("white")
+    t.begin_fill()
+    for point in leftThirdSideColumnPoints:
+        
+        t.goto(coordinates(*point))
+    t.end_fill()
+
+    # middle1stColumnPoints
+    t.pu()
+    t.goto(coordinates(*middle1stFrontColumnPoints[0]))
+    t.pd()
+    
+    t.fillcolor("white")
+    t.begin_fill()
+    for point in middle1stFrontColumnPoints:
+        
+        t.goto(coordinates(*point))
+    t.end_fill()
+
+    t.pu()
+    t.goto(coordinates(*middle1stTopColumnPoints[0]))
+    t.pd()
+    
+    t.fillcolor("white")
+    t.begin_fill()
+    for point in middle1stTopColumnPoints:
+        
+        t.goto(coordinates(*point))
+    t.end_fill()
+    
+    t.pu()
+    t.goto(coordinates(*middle1stSideColumnPoints[0]))
+    t.pd()
+    
+    t.color("black")
+    t.fillcolor("white")
+    t.begin_fill()
+    for point in middle1stSideColumnPoints:
+        
+        t.goto(coordinates(*point))
+    t.end_fill()
+
+    # Tennis Court
+    t.pu()
+    t.goto(coordinates(*tennisLeftCourtPoints[0]))
+    t.pd()
+    
+    t.color("white")
+    for point in tennisLeftCourtPoints:
+        
+        t.goto(coordinates(*point))
+
+    t.pu()
+    t.goto(coordinates(*tennisRightCourtPoints[0]))
+    t.pd()
+    
+    t.color("white")
+    for point in tennisRightCourtPoints:
+        
+        t.goto(coordinates(*point))
 
 drawBuilding()
 screen.mainloop()
