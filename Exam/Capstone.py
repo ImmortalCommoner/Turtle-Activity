@@ -349,313 +349,359 @@ rightLightThreePoints = [
 
 def drawBuilding():
 
-    # yellow gutter
-    t.pu()
-    t.goto(coordinates(*buildingPoints[0]))
-    t.pd()
-    
-    t.fillcolor("yellow")
-    t.begin_fill()
-    for point in buildingPoints:
+    def drawYellowGutter():
+        # yellow gutter
+        t.pu()
+        t.goto(coordinates(*buildingPoints[0]))
+        t.pd()
         
-        t.goto(coordinates(*point))
-    t.end_fill()
+        t.fillcolor("yellow")
+        t.begin_fill()
+        for point in buildingPoints:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
+    
+    drawYellowGutter()
 
-    # column
-    t.pu()
-    t.goto(coordinates(*bottomRightBeamPoints[0]))
-    t.pd()
-    
-    t.fillcolor("gray")
-    t.begin_fill()
-    for point in bottomRightBeamPoints:
+    def drawColumn():
+        # column
+        t.pu()
+        t.goto(coordinates(*bottomRightBeamPoints[0]))
+        t.pd()
         
-        t.goto(coordinates(*point))
-    t.end_fill()
+        t.fillcolor("gray")
+        t.begin_fill()
+        for point in bottomRightBeamPoints:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
     
-    t.pu()
-    t.goto(coordinates(*bottomTopBeamPoints[0]))
-    t.pd()
-    
-    t.fillcolor("white")
-    t.begin_fill()
-    for point in bottomTopBeamPoints:
-        
-        t.goto(coordinates(*point))
-    t.end_fill()
+    drawColumn()
 
-    # Right Columns
-    t.pu()
-    t.goto(coordinates(*rightColumnPoints[0]))
-    t.pd()
+    def drawBeam():
     
-    t.fillcolor("white")
-    t.begin_fill()
-    for point in rightColumnPoints:
+        t.pu()
+        t.goto(coordinates(*bottomTopBeamPoints[0]))
+        t.pd()
         
-        t.goto(coordinates(*point))
-    t.end_fill()
+        t.fillcolor("white")
+        t.begin_fill()
+        for point in bottomTopBeamPoints:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
+    
+    drawBeam()
 
-    t.pu()
-    t.goto(coordinates(*rightColumnTwoPoints[0]))
-    t.pd()
-    
-    t.fillcolor("white")
-    t.begin_fill()
-    for point in rightColumnTwoPoints:
+    def drawRightColumns():
+        # Right Columns
+        t.pu()
+        t.goto(coordinates(*rightColumnPoints[0]))
+        t.pd()
         
-        t.goto(coordinates(*point))
-    t.end_fill()
+        t.fillcolor("white")
+        t.begin_fill()
+        for point in rightColumnPoints:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
 
-    # Light Post
-    t.pu()
-    t.goto(coordinates(*rightLightPoints[0]))
-    t.pd()
-    
-    t.fillcolor("blue")
-    t.begin_fill()
-    for point in rightLightPoints:
+        t.pu()
+        t.goto(coordinates(*rightColumnTwoPoints[0]))
+        t.pd()
         
-        t.goto(coordinates(*point))
-    t.end_fill()
+        t.fillcolor("white")
+        t.begin_fill()
+        for point in rightColumnTwoPoints:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
+    
+    drawRightColumns()
 
-    t.pu()
-    t.goto(coordinates(*rightLightTwoPoints[0]))
-    t.pd()
-    
-    t.fillcolor("blue")
-    t.begin_fill()
-    for point in rightLightTwoPoints:
+    def drawRightLightPost():
+        # Light Post
+        t.pu()
+        t.goto(coordinates(*rightLightPoints[0]))
+        t.pd()
         
-        t.goto(coordinates(*point))
-    t.end_fill()
+        t.fillcolor("blue")
+        t.begin_fill()
+        for point in rightLightPoints:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
 
-    t.pu()
-    t.goto(coordinates(*rightLightThreePoints[0]))
-    t.pd()
-    
-    t.fillcolor("blue")
-    t.begin_fill()
-    for point in rightLightThreePoints:
+        t.pu()
+        t.goto(coordinates(*rightLightTwoPoints[0]))
+        t.pd()
         
-        t.goto(coordinates(*point))
-    t.end_fill()
-    
-    # whiteOutsideCourt
-    t.pu()
-    t.goto(coordinates(*whiteOutsideCourt[0]))
-    t.pd()
-    
-    t.fillcolor("white")
-    t.begin_fill()
-    for point in whiteOutsideCourt:
-        
-        t.goto(coordinates(*point))
-    t.end_fill()
+        t.fillcolor("blue")
+        t.begin_fill()
+        for point in rightLightTwoPoints:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
 
-    # blueInsideCourt
-    t.pu()
-    t.goto(coordinates(*blueInsideCourt[0]))
-    t.pd()
-    
-    t.fillcolor("blue")
-    t.begin_fill()
-    for point in blueInsideCourt:
+        t.pu()
+        t.goto(coordinates(*rightLightThreePoints[0]))
+        t.pd()
         
-        t.goto(coordinates(*point))
-    t.end_fill()
+        t.fillcolor("blue")
+        t.begin_fill()
+        for point in rightLightThreePoints:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
+    
+    drawRightLightPost()
 
-    # greyLowfencePoints
-    t.pu()
-    t.goto(coordinates(*greyLowfencePoints[0]))
-    t.pd()
-    
-    t.fillcolor("grey")
-    t.begin_fill()
-    for point in greyLowfencePoints:
+    def drawWhiteOutsideCourt():
         
-        t.goto(coordinates(*point))
-    t.end_fill()
+        # whiteOutsideCourt
+        t.pu()
+        t.goto(coordinates(*whiteOutsideCourt[0]))
+        t.pd()
+        
+        t.fillcolor("white")
+        t.begin_fill()
+        for point in whiteOutsideCourt:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
+    
+    drawWhiteOutsideCourt()
 
-    # whiteUpperBeamPoints
-    t.pu()
-    t.goto(coordinates(*whiteUpperTopBeamPoints[0]))
-    t.pd()
-    
-    t.fillcolor("grey")
-    t.begin_fill()
-    for point in whiteUpperTopBeamPoints:
+    def drawblueInsideCourt():
+        # blueInsideCourt
+        t.pu()
+        t.goto(coordinates(*blueInsideCourt[0]))
+        t.pd()
         
-        t.goto(coordinates(*point))
-    t.end_fill()
+        t.fillcolor("blue")
+        t.begin_fill()
+        for point in blueInsideCourt:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
+    
+    drawblueInsideCourt()
 
-    # whiteUpperFrontBeamPoints
-    t.pu()
-    t.goto(coordinates(*whiteUpperFrontBeamPoints[0]))
-    t.pd()
-    
-    t.fillcolor("grey")
-    t.begin_fill()
-    for point in whiteUpperFrontBeamPoints:
-        
-        t.goto(coordinates(*point))
-    t.end_fill()
+    def drawgreyLowfencePoints():
 
-    # leftFirstColumnPoints
-    t.pu()
-    t.goto(coordinates(*leftFirstFrontColumnPoints[0]))
-    t.pd()
-    
-    t.fillcolor("white")
-    t.begin_fill()
-    for point in leftFirstFrontColumnPoints:
+        # greyLowfencePoints
+        t.pu()
+        t.goto(coordinates(*greyLowfencePoints[0]))
+        t.pd()
         
-        t.goto(coordinates(*point))
-    t.end_fill()
+        t.fillcolor("grey")
+        t.begin_fill()
+        for point in greyLowfencePoints:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
 
-    t.pu()
-    t.goto(coordinates(*leftFirstTopColumnPoints[0]))
-    t.pd()
-    
-    t.fillcolor("white")
-    t.begin_fill()
-    for point in leftFirstTopColumnPoints:
-        
-        t.goto(coordinates(*point))
-    t.end_fill()
-    
-    t.pu()
-    t.goto(coordinates(*leftFirstSideColumnPoints[0]))
-    t.pd()
-    
-    t.fillcolor("white")
-    t.begin_fill()
-    for point in leftFirstSideColumnPoints:
-        
-        t.goto(coordinates(*point))
-    t.end_fill()
+    drawgreyLowfencePoints()
 
-    # leftSecondColumnPoints
-    t.pu()
-    t.goto(coordinates(*leftSecondFrontColumnPoints[0]))
-    t.pd()
-    
-    t.fillcolor("white")
-    t.begin_fill()
-    for point in leftSecondFrontColumnPoints:
+    def drawWhiteUpperBeams():
+        # whiteUpperBeamPoints
+        t.pu()
+        t.goto(coordinates(*whiteUpperTopBeamPoints[0]))
+        t.pd()
         
-        t.goto(coordinates(*point))
-    t.end_fill()
+        t.fillcolor("grey")
+        t.begin_fill()
+        for point in whiteUpperTopBeamPoints:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
+    
+    drawWhiteUpperBeams()
 
-    t.pu()
-    t.goto(coordinates(*leftSecondTopColumnPoints[0]))
-    t.pd()
-    
-    t.fillcolor("white")
-    t.begin_fill()
-    for point in leftSecondTopColumnPoints:
+    def drawWhiteUpperFrontBeams():
+        # whiteUpperFrontBeamPoints
+        t.pu()
+        t.goto(coordinates(*whiteUpperFrontBeamPoints[0]))
+        t.pd()
         
-        t.goto(coordinates(*point))
-    t.end_fill()
+        t.fillcolor("grey")
+        t.begin_fill()
+        for point in whiteUpperFrontBeamPoints:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
     
-    t.pu()
-    t.goto(coordinates(*leftSecondSideColumnPoints[0]))
-    t.pd()
+    drawWhiteUpperFrontBeams()
     
-    t.fillcolor("white")
-    t.begin_fill()
-    for point in leftSecondSideColumnPoints:
+    def drawLeftColumns():
+        # leftFirstColumnPoints
+        t.pu()
+        t.goto(coordinates(*leftFirstFrontColumnPoints[0]))
+        t.pd()
         
-        t.goto(coordinates(*point))
-    t.end_fill()
+        t.fillcolor("white")
+        t.begin_fill()
+        for point in leftFirstFrontColumnPoints:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
 
-    # leftThirdColumnPoints
-    t.pu()
-    t.goto(coordinates(*leftThirdFrontColumnPoints[0]))
-    t.pd()
-    
-    t.fillcolor("white")
-    t.begin_fill()
-    for point in leftThirdFrontColumnPoints:
+        t.pu()
+        t.goto(coordinates(*leftFirstTopColumnPoints[0]))
+        t.pd()
         
-        t.goto(coordinates(*point))
-    t.end_fill()
+        t.fillcolor("white")
+        t.begin_fill()
+        for point in leftFirstTopColumnPoints:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
+        
+        t.pu()
+        t.goto(coordinates(*leftFirstSideColumnPoints[0]))
+        t.pd()
+        
+        t.fillcolor("white")
+        t.begin_fill()
+        for point in leftFirstSideColumnPoints:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
 
-    t.pu()
-    t.goto(coordinates(*leftThirdTopColumnPoints[0]))
-    t.pd()
-    
-    t.fillcolor("white")
-    t.begin_fill()
-    for point in leftThirdTopColumnPoints:
+        # leftSecondColumnPoints
+        t.pu()
+        t.goto(coordinates(*leftSecondFrontColumnPoints[0]))
+        t.pd()
         
-        t.goto(coordinates(*point))
-    t.end_fill()
-    
-    t.pu()
-    t.goto(coordinates(*leftThirdSideColumnPoints[0]))
-    t.pd()
-    
-    t.fillcolor("white")
-    t.begin_fill()
-    for point in leftThirdSideColumnPoints:
-        
-        t.goto(coordinates(*point))
-    t.end_fill()
+        t.fillcolor("white")
+        t.begin_fill()
+        for point in leftSecondFrontColumnPoints:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
 
-    # middle1stColumnPoints
-    t.pu()
-    t.goto(coordinates(*middle1stFrontColumnPoints[0]))
-    t.pd()
-    
-    t.fillcolor("white")
-    t.begin_fill()
-    for point in middle1stFrontColumnPoints:
+        t.pu()
+        t.goto(coordinates(*leftSecondTopColumnPoints[0]))
+        t.pd()
         
-        t.goto(coordinates(*point))
-    t.end_fill()
+        t.fillcolor("white")
+        t.begin_fill()
+        for point in leftSecondTopColumnPoints:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
+        
+        t.pu()
+        t.goto(coordinates(*leftSecondSideColumnPoints[0]))
+        t.pd()
+        
+        t.fillcolor("white")
+        t.begin_fill()
+        for point in leftSecondSideColumnPoints:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
 
-    t.pu()
-    t.goto(coordinates(*middle1stTopColumnPoints[0]))
-    t.pd()
-    
-    t.fillcolor("white")
-    t.begin_fill()
-    for point in middle1stTopColumnPoints:
+        # leftThirdColumnPoints
+        t.pu()
+        t.goto(coordinates(*leftThirdFrontColumnPoints[0]))
+        t.pd()
         
-        t.goto(coordinates(*point))
-    t.end_fill()
+        t.fillcolor("white")
+        t.begin_fill()
+        for point in leftThirdFrontColumnPoints:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
+
+        t.pu()
+        t.goto(coordinates(*leftThirdTopColumnPoints[0]))
+        t.pd()
+        
+        t.fillcolor("white")
+        t.begin_fill()
+        for point in leftThirdTopColumnPoints:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
+        
+        t.pu()
+        t.goto(coordinates(*leftThirdSideColumnPoints[0]))
+        t.pd()
+        
+        t.fillcolor("white")
+        t.begin_fill()
+        for point in leftThirdSideColumnPoints:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
     
-    t.pu()
-    t.goto(coordinates(*middle1stSideColumnPoints[0]))
-    t.pd()
+    drawLeftColumns()
+
+    def drawMiddleColumns():
+        # middle1stColumnPoints
+        t.pu()
+        t.goto(coordinates(*middle1stFrontColumnPoints[0]))
+        t.pd()
+        
+        t.fillcolor("white")
+        t.begin_fill()
+        for point in middle1stFrontColumnPoints:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
+
+        t.pu()
+        t.goto(coordinates(*middle1stTopColumnPoints[0]))
+        t.pd()
+        
+        t.fillcolor("white")
+        t.begin_fill()
+        for point in middle1stTopColumnPoints:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
+        
+        t.pu()
+        t.goto(coordinates(*middle1stSideColumnPoints[0]))
+        t.pd()
+        
+        t.color("black")
+        t.fillcolor("white")
+        t.begin_fill()
+        for point in middle1stSideColumnPoints:
+            
+            t.goto(coordinates(*point))
+        t.end_fill()
     
+    drawMiddleColumns()
+    
+    def drawTennisCourt():
+        # Tennis Court
+        t.pu()
+        t.goto(coordinates(*tennisLeftCourtPoints[0]))
+        t.pd()
+        
+        t.color("white")
+        for point in tennisLeftCourtPoints:
+            
+            t.goto(coordinates(*point))
+
+        t.pu()
+        t.goto(coordinates(*tennisRightCourtPoints[0]))
+        t.pd()
+        
+        t.color("white")
+        for point in tennisRightCourtPoints:
+            
+            t.goto(coordinates(*point))
+    
+    drawTennisCourt()
+
+    # return to black outline
     t.color("black")
-    t.fillcolor("white")
-    t.begin_fill()
-    for point in middle1stSideColumnPoints:
         
-        t.goto(coordinates(*point))
-    t.end_fill()
-
-    # Tennis Court
-    t.pu()
-    t.goto(coordinates(*tennisLeftCourtPoints[0]))
-    t.pd()
-    
-    t.color("white")
-    for point in tennisLeftCourtPoints:
-        
-        t.goto(coordinates(*point))
-
-    t.pu()
-    t.goto(coordinates(*tennisRightCourtPoints[0]))
-    t.pd()
-    
-    t.color("white")
-    for point in tennisRightCourtPoints:
-        
-        t.goto(coordinates(*point))
 
 drawBuilding()
 screen.mainloop()
