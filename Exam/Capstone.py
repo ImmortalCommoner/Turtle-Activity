@@ -537,47 +537,56 @@ SportsBuildingBottomWindowColourPoints = [
 ]
 
 SportsBuildingBottomWindowOutlinePoints = [
-    (0, 0),
-    (0, 0),
-    (0, 0),
-    (0, 0),
-    (0, 0),
+    (2962.07, 887.77),
+    (2966.87, 724.12),
+    (2911.87, 729.03),
+    (2909.39, 796.56),
+    (3023.59, 789.84),
+    (3022.17, 826.08),
+    (2908.33, 830.67),
+    (2906.69, 888.25),
 
-    (0, 0),
-    (0, 0),
-    (0, 0),
-    (0, 0),
-    (0, 0),
+    (3152.19, 880.97),
+    (3159.12, 711.37),
+    (3099.91, 713.78),
+    (3097.22, 787.63),
+    (3216.54, 781.71),
+    (3215.48, 816.00),
+    (3095.37, 821.75),
+    (3093.15, 882.82),
 
-    (0, 0),
-    (0, 0),
-    (0, 0),
-    (0, 0),
-    (0, 0),
+    (3393.25, 874.25),
+    (3402.00, 697.25),
+    (3337.50, 702.00),
+    (3333.75, 773.75),
+    (3465.00, 766.25),
+    (3462.50, 806.25),
+    (3332.25, 812.00),
+    (3329.50, 877.00),
 
-    (0, 0),
-    (0, 0),
-    (0, 0),
-    (0, 0),
-    (0, 0),
+    (3610.50, 867.50),
+    (3622.25, 685.25),
+    (3553.50, 689.00),
+    (3549.25, 766.25),
+    (3688.50, 758.00),
+    (3686.00, 798.75),
+    (3546.00, 804.25),
+    (3542.00, 870.50),
 
-    (0, 0),
-    (0, 0),
-    (0, 0),
-    (0, 0),
-    (0, 0),
+    (3895.80, 858.78),
+    (3911.01, 668.22),
+    (3833.25, 672.50),
+    (3828.63, 750.95),
+    (3981.72, 742.46),
+    (3978.54, 784.53),
+    (3825.45, 791.25),
+    (3820.75, 860.75),
     
-    (0, 0),
-    (0, 0),
-    (0, 0),
-    (0, 0),
-    (0, 0),
-
-    (0, 0),
-    (0, 0),
-    (0, 0),
-    (0, 0),
-    (0, 0),
+    (4095.96, 853.0),
+    (4095.96, 779.00),
+    (4077.00, 780.25),
+    (4079.75, 737.50),
+    (4095.96, 737.50),
 ]
 
 SportsBuildingLittleWindowColourPoints = [
@@ -657,6 +666,106 @@ SportsBuildingLittleWindowOutlinePoints = [
     (0, 0),
 ]
 
+
+centerColumnWhitePoints = [
+    (1940.30, 1235.67),
+    (1998.99, 1238.50),
+    (2033.290, 1233.55),
+    (2030.10, 966.97),
+    (1974.95, 966.61),
+    (1935.70, 971.21),
+    (1940.30, 1235.67),
+]
+
+centerColumnGrayPoints = [
+    (1940.30, 1235.67),
+    (1998.99, 1238.50),
+    (2033.290, 1233.55),
+    (2033.29, 1296.75),
+    (1999.63, 1301.59),
+    (1940.94, 1296.90),  
+    (1940.30, 1235.67),
+]
+
+centerColumnOutlinePoints = [
+    (0, 0),
+    (0, 0),
+    (0, 0),
+
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    (0, 0),
+
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    (0, 0),
+
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    (0, 0),
+
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    (0, 0),
+]
+
+centerColumnOutlinePoints = [
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    (0, 0),
+
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    (0, 0),
+
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    (0, 0),
+
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    (0, 0),
+
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    (0, 0),
+
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    (0, 0),
+    (0, 0),
+]
 
 nameDirectionPoints = [
     (0, 0),
@@ -1163,6 +1272,54 @@ def drawBuilding():
             t.goto(coordinates(*point))
     
     drawTennisCourt()
+
+    def drawCenterColumnPoints():
+            def drawCenterColumnWhitePoints():
+                # WindowColor
+                t.pu()
+                t.goto(coordinates(*centerColumnWhitePoints[0]))
+                t.pd()
+
+                t.fillcolor("white")
+                t.begin_fill()
+                
+                for point in centerColumnWhitePoints:
+                    t.goto(coordinates(*point))
+                
+                t.end_fill()
+            
+            drawCenterColumnWhitePoints()
+
+            def drawCenterColumnGrayPoints():
+                # WindowColor
+                t.pu()
+                t.goto(coordinates(*centerColumnGrayPoints[0]))
+                t.pd()
+
+                t.fillcolor("gray")
+                t.begin_fill()
+                
+                for point in centerColumnGrayPoints:
+                    t.goto(coordinates(*point))
+                
+                t.end_fill()
+            
+            drawCenterColumnGrayPoints()
+            
+            def drawCenterColumnOutlinePoints():
+                # windowOutline
+                t.pu()
+                t.goto(coordinates(*centerColumnOutlinePoints[0]))
+                t.pd()
+                
+                t.color("black")
+                for point in centerColumnOutlinePoints:
+                    t.goto(coordinates(*point))
+            
+            drawCenterColumnOutlinePoints()
+            
+    drawCenterColumnPoints()
+
 
     # return to black outline
     t.color("black")
